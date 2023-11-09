@@ -482,9 +482,9 @@
 	<link rel="icon" href="wp-content/uploads/2023/04/faceicon-150x150.png" sizes="32x32" />
 	<link rel="icon" href="wp-content/uploads/2023/04/faceicon.png" sizes="192x192" />
 	<link rel="apple-touch-icon" href="wp-content/uploads/2023/04/faceicon.png" />
+	<link rel="stylesheet" href="wp-includes/css/dist/block-library/tingle.css">
 	<meta name="msapplication-TileImage"
 		content="https://hector.1onestrong.com/wp-content/uploads/2023/04/faceicon.png" />
-
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MY4D4CRYYP"></script>
 	<script>
@@ -770,7 +770,7 @@
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
 									<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float"
-										href="tel:+918035575479">
+										href="tel:+919606737445">
 										<span class="elementor-button-content-wrapper">
 											<span class="elementor-button-text">book an appoinment</span>
 										</span>
@@ -802,7 +802,7 @@
 											data-widget_type="elementskit-icon-box.default">
 											<div class="elementor-widget-container">
 												<div class="ekit-wid-con"> <!-- link opening -->
-													<a href="tel:+918035575479" class="ekit_global_links">
+													<a href="tel:+919606737445" class="ekit_global_links">
 														<!-- end link opening -->
 
 														<div
@@ -815,7 +815,7 @@
 															</div>
 															<div class="box-body">
 																<h4 class="elementskit-info-box-title">
-																	+918035575479 </h4>
+																	+919606737445 </h4>
 																<p>click above to Call Us</p>
 															</div>
 
@@ -2345,7 +2345,7 @@
 											data-widget_type="elementskit-icon-box.default">
 											<div class="elementor-widget-container">
 												<div class="ekit-wid-con"> <!-- link opening -->
-													<a href="tel:+918035575479" class="ekit_global_links">
+													<a href="tel:+919606737445" class="ekit_global_links">
 														<!-- end link opening -->
 
 														<div
@@ -2358,7 +2358,7 @@
 															</div>
 															<div class="box-body">
 																<h4 class="elementskit-info-box-title">
-																	+918035575479 </h4>
+																	+919606737445 </h4>
 																<p>Customer Care</p>
 															</div>
 
@@ -2732,7 +2732,6 @@
 		href='wp-content/plugins/metform/public/assets/css/style3088.css?ver=3.7.0' media='all' />
 	<link rel='stylesheet' id='e-animations-css'
 		href='wp-content/plugins/elementor/assets/lib/animations/animations.minf92b.css?ver=3.16.6' media='all' />
-	<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src='wp-content/themes/hello-elementor/assets/js/hello-frontend.min8a54.js?ver=1.0.0'
 		id='hello-theme-frontend-js'></script>
 	<script src='wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script6e0e.js?ver=3.0.0'
@@ -2741,8 +2740,40 @@
 		var elementskit = {
 			resturl: 'https://hector.1onestrong.com/wp-json/elementskit/v1/',
 		}
+	</script>
+	<script src="wp-includes/js/tingle.js"></script>
 
+	<script>
+		setTimeout(function () {
+			var modal = new tingle.modal({
+				footer: true,
+				stickyFooter: false,
+				closeMethods: ['overlay', 'button', 'escape'],
+				closeLabel: "Close",
+			});
 
+			// set content
+			modal.setContent('<img src="wp-includes/img/pop-up_image.jpg" alt="diwali_offer">');
+
+			// add a button
+			modal.addFooterBtn('Call US Now', 'tingle-btn tingle-btn--primary', function () {
+
+				
+					var phoneNumber = "+919606737445";
+					console.log(phoneNumber);
+					window.location.href = "tel:" + phoneNumber;
+				
+			});
+
+			// add another button
+			//   modal.addFooterBtn('Dangerous action!', 'tingle-btn tingle-btn--danger', function () {
+			// 	// here goes some logic
+			// 	modal.close();
+			//   });
+
+			// open modal
+			modal.open();
+		}, 3000); // Open the modal after 3 seconds
 	</script>
 	<script src='wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts6e0e.js?ver=3.0.0'
 		id='ekit-widget-scripts-js'></script>
