@@ -16172,6 +16172,7 @@ header.nail.booking.sticky {
 .contact-from-top-section .address-line-section {
   background: #DEEFFF;
   padding: 30px 40px;
+  height: 100%;
 }
 
 @media (max-width: 1399px) {
@@ -16207,6 +16208,7 @@ header.nail.booking.sticky {
 .contact-from-top-section .opening-hours-section {
   background: #FFECE3;
   padding: 30px 40px;
+  height: 100%;
 }
 
 @media (max-width: 1399px) {
