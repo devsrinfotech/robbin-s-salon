@@ -45,6 +45,71 @@
       }
     }
     </script>
+    <!-- FAQ Schema: mirrors the visible men's services FAQs below. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Robbin's Unisex Salon located in JP Nagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Robbin's Unisex Salon is at No.1746, 9th Cross, 2nd Phase, next to Vignesh Jewellers, JP Nagar, Bengaluru 560078."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which men's grooming services are available at Robbin's Unisex Salon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our men's services in JP Nagar include haircuts and styling, beard styling and shaves, hair colour and highlights, hand and foot care, head massage, scalp care, and selected face and skin services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to book a men's haircut or beard styling appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We recommend booking in advance so our team can reserve a convenient time for your haircut, beard grooming, hair colour, or scalp treatment. Call Robbin's Unisex Salon on 9945649161 or use our contact page to request an appointment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a men's haircut and beard grooming in one visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can plan your visit around men's hair services and beard grooming, including beard styling, trims, classic shaves, and luxury beard shaves. Let us know the services you would like when you book."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer men's hair colour and highlights in JP Nagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our men's hair services include root touch-ups, beard and moustache colour, global colour options, and partial crown highlights. Your stylist can help you choose a service that suits your preferred look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What scalp care and head massage services do you offer for men?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Men can choose head massage with or without a hair wash, an argan oil head massage, and scalp-care options for concerns such as dandruff, hair fall, soothing, purifying, and root activation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your opening hours for men's grooming services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Robbin's Unisex Salon is open daily from 9:00 AM to 9:00 PM for men's grooming services in JP Nagar, Bengaluru."
+          }
+        }
+      ]
+    }
+    </script>
     <!-- swiper link -->
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
     <!-- fancybox link -->
@@ -60,6 +125,69 @@
     <link rel="stylesheet" href="/assets/css/twentytwenty.css">
     <!-- My css link -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        /* Men’s services: show the explainer and service name without prices. */
+        #pills-tabContent .eg-table2 thead th:last-child,
+        #pills-tabContent .eg-table2 tbody td:last-child {
+            display: none;
+        }
+
+        #pills-tabContent .eg-table2 thead th.service,
+        #pills-tabContent .eg-table2 tbody td:nth-child(2),
+        #pills-tabContent .eg-table2 .service-area,
+        #pills-tabContent .eg-table2 .service-area h6,
+        #pills-tabContent .eg-table2 .service-content {
+            text-align: center;
+        }
+
+        #pills-tabContent .eg-table2 thead th.service,
+        #pills-tabContent .eg-table2 .service-area {
+            padding-left: 0;
+        }
+
+        #pills-tabContent .eg-table2 tbody td:nth-child(2) {
+            width: 95%;
+        }
+
+        #pills-tabContent .eg-table2 .service-area {
+            max-width: none;
+        }
+
+        @media (max-width: 767px) {
+            #pills-tabContent .eg-table2 tbody td:nth-child(2) {
+                width: 100%;
+            }
+        }
+
+        .menu-whatsapp-cta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn {
+            background: var(--title-color);
+            color: var(--white-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn::after {
+            background-color: var(--title-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn:hover {
+            color: var(--white-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn .arrow,
+        .menu-whatsapp-cta .whatsapp-cta-btn:hover .arrow {
+            stroke: var(--white-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn .bi-whatsapp {
+            font-size: 18px;
+            line-height: 1;
+        }
+    </style>
     <title>Men's Services Menu | Robbin's Unisex Salon, JP Nagar</title>
     <link rel="icon" href="/assets/image/favicon.ico" type="image/png">
 </head>
@@ -74,7 +202,7 @@
             <div class="main-menu">
                 <div class="mobile-menu-logo">
                     <a href="index.html"><img alt="image" class="img-fluid"
-                            src="https://demo.egenslab.com/html/buret/preview/assets/image/icon/buret-logo.svg"></a>
+                            src="/assets/image/logo-light.png"></a>
                 </div>
                 <ul class="menu-list">
                     <li class="menu">
@@ -147,6 +275,18 @@
             <div class="row justify-content-center">
                 <div class="col-xl-10">
                     <div class="treatment-menu-nav-area">
+                        <div class="menu-whatsapp-cta">
+                            <a class="primary-btn4 whatsapp-cta-btn" href="https://wa.me/919945649161"
+                                target="_blank" rel="noopener noreferrer" aria-label="Book an appointment on WhatsApp">
+                                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                                BOOK VIA WHATSAPP
+                                <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
+                                        stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <div class="nav-link active" id="pills-facial-tab" data-bs-toggle="pill"
@@ -329,7 +469,7 @@
                                                     </td>
                                                     <td class="table-product">
                                                         <div class="service-area">
-                                                            <h6>Global Colors - Root TouchupRegular</h6>
+                                                            <h6>Global Colors - Root Touchup Regular</h6>
                                                         </div>
                                                     </td>
                                                     <td><span class="price">1200 INR</span></td>
@@ -340,7 +480,7 @@
                                                     </td>
                                                     <td class="table-product">
                                                         <div class="service-area">
-                                                            <h6>Global Colors - Root TouchupAmmonia Free</h6>
+                                                            <h6>Global Colors - Root Touchup Ammonia Free</h6>
                                                         </div>
                                                     </td>
                                                     <td><span class="price">1400 INR</span></td>
@@ -1207,9 +1347,9 @@
             <div class="row justify-content-center mb-70">
                 <div class="col-xl-5 col-lg-7">
                     <div class="spa-section-title text-center">
-                        <h2>FAQ’S</h2>
-                        <p>We believe in the transformative power of relaxation and self-care. Nestled in the heart of
-                            UK.</p>
+                        <h2>Men's Grooming FAQs in JP Nagar</h2>
+                        <p>Find helpful information about men's hair, beard, scalp-care, and grooming services at
+                            Robbin's Unisex Salon in JP Nagar, Bengaluru.</p>
                     </div>
                 </div>
             </div>
@@ -1223,16 +1363,14 @@
                                     <h5 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                            aria-controls="flush-collapseOne">how can i prepare for my spa
-                                            appointment?</button>
+                                            aria-controls="flush-collapseOne">Where is Robbin's Unisex Salon located
+                                            in JP Nagar?</button>
                                     </h5>
                                     <div id="flush-collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Robbin's Unisex Salon is at No.1746, 9th Cross, 2nd Phase, next to Vignesh
+                                            Jewellers, JP Nagar, Bengaluru 560078.
                                         </div>
                                     </div>
                                 </div>
@@ -1241,16 +1379,15 @@
                                     <h5 class="accordion-header" id="flush-headingTwo">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo">how do i book an
-                                            appointment?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">Which men's
+                                            grooming services are available at Robbin's Unisex Salon?</button>
                                     </h5>
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Our men's services in JP Nagar include haircuts and styling, beard styling
+                                            and shaves, hair colour and highlights, hand and foot care, head massage,
+                                            scalp care, and selected face and skin services.
                                         </div>
                                     </div>
                                 </div>
@@ -1259,16 +1396,16 @@
                                     <h5 class="accordion-header" id="flush-headingThree">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">What services do
-                                            you offer at your beauty and spa center?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseThree">Do I need to
+                                            book a men's haircut or beard styling appointment?</button>
                                     </h5>
                                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            We recommend booking in advance so our team can reserve a convenient time
+                                            for your haircut, beard grooming, hair colour, or scalp treatment. Call us
+                                            on <a href="tel:9945649161">9945649161</a> or use our <a
+                                                href="contact.html">contact page</a> to request an appointment.
                                         </div>
                                     </div>
                                 </div>
@@ -1277,16 +1414,15 @@
                                     <h5 class="accordion-header" id="flush-headingFour">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
-                                            aria-expanded="false" aria-controls="flush-collapseFour">what should i
-                                            expect during my spa visit?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseFour">Can I get a men's
+                                            haircut and beard grooming in one visit?</button>
                                     </h5>
                                     <div id="flush-collapseFour" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Yes. You can plan your visit around men's hair services and beard grooming,
+                                            including beard styling, trims, classic shaves, and luxury beard shaves.
+                                            Let us know the services you would like when you book.
                                         </div>
                                     </div>
                                 </div>
@@ -1295,16 +1431,15 @@
                                     <h5 class="accordion-header" id="flush-headingFive">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
-                                            aria-expanded="false" aria-controls="flush-collapseFive">do you offer gift
-                                            certificates for spa services?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseFive">Do you offer
+                                            men's hair colour and highlights in JP Nagar?</button>
                                     </h5>
                                     <div id="flush-collapseFive" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Yes. Our men's hair services include root touch-ups, beard and moustache
+                                            colour, global colour options, and partial crown highlights. Your stylist
+                                            can help you choose a service that suits your preferred look.
                                         </div>
                                     </div>
                                 </div>
@@ -1313,16 +1448,15 @@
                                     <h5 class="accordion-header" id="flush-headingSix">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
-                                            aria-expanded="false" aria-controls="flush-collapseSix"> How should I
-                                            prepare for my spa appointment?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseSix">What scalp care
+                                            and head massage services do you offer for men?</button>
                                     </h5>
                                     <div id="flush-collapseSix" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Men can choose head massage with or without a hair wash, an argan oil head
+                                            massage, and scalp-care options for concerns such as dandruff, hair fall,
+                                            soothing, purifying, and root activation.
                                         </div>
                                     </div>
                                 </div>
@@ -1331,16 +1465,14 @@
                                     <h5 class="accordion-header" id="flush-headingSeven">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven"
-                                            aria-expanded="false" aria-controls="flush-collapseSeven"> what is your
-                                            cancellation policy?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseSeven">What are your
+                                            opening hours for men's grooming services?</button>
                                     </h5>
                                     <div id="flush-collapseSeven" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Robbin's Unisex Salon is open daily from 9:00 AM to 9:00 PM for men's
+                                            grooming services in JP Nagar, Bengaluru.
                                         </div>
                                     </div>
                                 </div>
@@ -1373,7 +1505,7 @@
                 <div class="row g-4 mb-100">
                     <div class="col-lg-4 col-md-6">
                         <a class="primary-btn1 footer-btn" href="contact.html">
-                            BOOK AN APPOINTMNET
+                            BOOK AN APPOINTMENT
                             <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
@@ -1539,6 +1671,132 @@
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/jquery.twentytwenty.js"></script>
     <script src="/assets/js/jquery.event.move.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menServiceDescriptions = {
+                'Sculpt - Senior Stylist': 'A precision men\'s haircut in JP Nagar, Bengaluru, shaped by a senior stylist for a polished, easy-to-manage finish.',
+                'Sculpt - Creative Stylist': 'A personalised men\'s haircut and styling service for clients who want a contemporary look tailored to their hair and lifestyle.',
+                'Hairstyling - Blow Dry': 'A quick blow-dry styling service that adds a neat, groomed finish to your men\'s haircut or special-occasion look.',
+                'Hairstyling - Wash & Blow Dry': 'A refreshing hair wash followed by a professional blow dry for clean, well-styled men\'s hair in JP Nagar.',
+                'Hairstyling - Ironing': 'Smooth and refine your hairstyle with professional hair ironing for a sleek, controlled finish.',
+                'Hairstyling - Tonging': 'Add controlled texture or movement with tong styling, ideal for a styled men\'s look for events or everyday grooming.',
+                'Hairstyling - Wash & Blast Dry': 'A convenient hair wash and fast blast dry to leave your hair fresh, comfortable, and ready to style.',
+                'Global Colors - Root Touchup Regular': 'A regular men\'s root touch-up that refreshes visible regrowth and keeps your hair colour looking even.',
+                'Global Colors - Root Touchup Ammonia Free': 'An ammonia-free root touch-up for men seeking a gentler option to maintain an even hair colour.',
+                'Global Colors - BeardRegular': 'A regular beard colour service that helps create a more uniform, well-groomed beard appearance.',
+                'Global Colors - BeardAmmonia Free': 'An ammonia-free beard colour option for men who want a more even beard tone with a gentler formula.',
+                'Global Colors - Neck LengthRegular': 'Regular global hair colour for neck-length hair, applied to refresh or change your overall look.',
+                'Global Colors - Neck LengthAmmonia Free': 'Ammonia-free global colour for neck-length hair, tailored for men who prefer a gentler colour service.',
+                'Global Colors - MustacheRegular': 'A regular moustache colour service for a clean, more consistent grooming finish.',
+                'Global Colors - MustacheAmmonia Free': 'An ammonia-free moustache colour service for a naturally groomed and even-looking finish.',
+                'Highlights - Partial (Crown)': 'Partial crown highlights add subtle dimension and texture to a men\'s hairstyle without colouring the full head.',
+                'Highlights - Crazy Color Per Streak': 'A per-streak creative colour service for men who want a bold, personalised accent in their hairstyle.',
+                'Beards - Head Shave': 'A clean head shave performed as part of professional men\'s grooming in JP Nagar, Bengaluru.',
+                'Beards - Beard Styling': 'Detailed beard shaping and styling to complement your face shape, haircut, and preferred grooming style.',
+                'Beards - Beard Shave - Luxure': 'A premium beard shave experience for a close, refined finish and elevated men\'s grooming routine.',
+                'Beards - Beard Shave - Classic': 'A classic beard shave for a neat, close finish and a well-maintained appearance.',
+                'Beards - Beard Trim': 'A precise beard trim that removes uneven length and keeps your beard tidy between styling appointments.',
+                'Cuticles - Feet - Classic': 'Classic foot and cuticle care that cleans and tidies your feet as part of complete men\'s grooming.',
+                'Cuticles - Feet - Detan Classic': 'Classic foot care with de-tan attention to refresh the appearance of exposed feet.',
+                'Cuticles - Feet - Premium': 'Enhanced foot and cuticle care for men who want a more detailed, polished grooming service.',
+                'Cuticles - Feet - Luxury': 'A luxury foot and cuticle care session for an elevated, well-maintained finish.',
+                'Cuticles - Feet - Cut & File': 'A quick foot nail cut and file service to keep nails neat, comfortable, and presentable.',
+                'Cuticles - Hands - Classic': 'Classic hand and cuticle care for clean, well-groomed hands.',
+                'Cuticles - Hands - Detan Classic': 'Classic hand care with de-tan attention to refresh the appearance of your hands.',
+                'Cuticles - Hands - Premium': 'Detailed premium hand and cuticle care for a cleaner, more polished finish.',
+                'Cuticles - Hands - Luxury': 'Luxury hand and cuticle care for clients seeking a complete men\'s grooming experience in JP Nagar.',
+                'Cuticles - Hands - Cut & File': 'A fast hand nail cut and file service to maintain a neat, professional appearance.',
+                'Head Massage - With Hair Wash': 'A relaxing head massage followed by a hair wash to leave your scalp feeling refreshed and your hair clean.',
+                'Head Massage - Without Hair Wash': 'A focused head massage for a relaxing break and a refreshed-feeling scalp, without a hair wash.',
+                'Head Massage - Argan Oil': 'A nourishing argan oil head massage that supports a comfortable scalp and softer-feeling hair.',
+                'Scalp Care - Express - Anti-Hairfall': 'An express scalp-care service for men looking to improve their regular anti-hairfall hair-care routine.',
+                'Scalp Care - Express - Anti-Dandruff': 'An express anti-dandruff scalp-care service designed to refresh the scalp and support a cleaner-feeling hair routine.',
+                'Scalp Care - Spa - Anti-Dandruff': 'A deeper anti-dandruff scalp spa for men who want dedicated professional scalp care in JP Nagar.',
+                'Scalp Care - Spa - Root Activate': 'A professional scalp spa focused on a refreshed scalp and a stronger-looking hair-care routine.',
+                'Scalp Care - Spa - Soothing': 'A soothing scalp spa designed for a relaxing, comfortable grooming experience.',
+                'Scalp Care - Spa - Purifying': 'A purifying scalp spa that helps refresh the feel of the scalp as part of men\'s hair care.',
+                'Bleaching - Face/Neck': 'Face and neck bleaching for an even-looking, well-groomed appearance.',
+                'Bleaching - Full Arm': 'Full-arm bleaching for a more uniform appearance and a polished grooming finish.',
+                'Bleaching - Full Legs': 'Full-leg bleaching offered as part of professional men\'s body grooming services.',
+                'Bleaching - Underarms': 'Underarm bleaching for clients who want a more even-looking appearance.',
+                'Bleaching - Midriff': 'Midriff bleaching as a targeted body-grooming service for a refreshed appearance.',
+                'Bleaching - Full Back': 'Full-back bleaching for a more even-looking, well-maintained grooming result.',
+                'Bleaching - Half Back': 'Half-back bleaching for focused body grooming where you need it most.',
+                'Bleaching - Full Front': 'Full-front bleaching for a consistent, polished body-grooming finish.',
+                'Bleaching - Feet': 'Feet bleaching to complement professional foot and nail grooming.',
+                'Bleaching - Full Body': 'Full-body bleaching for clients seeking a comprehensive body-grooming service in Bengaluru.',
+                'De-Tan - Face/Neck': 'Face and neck de-tan care to help refresh the look of sun-exposed skin.',
+                'De-Tan - Full Arm': 'Full-arm de-tan care for a more even-looking and refreshed appearance.',
+                'De-Tan - Full Legs': 'Full-leg de-tan care as part of a complete men\'s skin and body-grooming routine.',
+                'De-Tan - Underarms': 'Targeted underarm de-tan care for a cleaner, refreshed appearance.',
+                'De-Tan - Midriff': 'Midriff de-tan care for targeted body grooming and a refreshed look.',
+                'De-Tan - Full Back': 'Full-back de-tan care for clients who want focused professional body grooming.',
+                'De-Tan - Half Back': 'Half-back de-tan care for a targeted, refreshed grooming result.',
+                'De-Tan - Full Front': 'Full-front de-tan care to help maintain an even-looking appearance.',
+                'De-Tan - Feet': 'Feet de-tan care that pairs well with our men\'s foot and cuticle services.',
+                'De-Tan - Full Body': 'Full-body de-tan care for a comprehensive, refreshed men\'s grooming experience.',
+                'FaceFit - Classic': 'A classic FaceFit service for a clean, refreshed facial-grooming routine.',
+                'FaceFit - Gold': 'An enhanced FaceFit service for men who want a more polished facial-care experience.',
+                'FaceFit - Premium (45 mins)': 'A 45-minute premium FaceFit session for focused men\'s facial grooming and self-care.',
+                'FaceFit - Luxury (45 mins)': 'A 45-minute luxury FaceFit session for an elevated facial-care experience at our JP Nagar salon.',
+                'Facial - Classic - Fruits': 'A classic fruit facial for a fresh-looking, well-groomed appearance.',
+                'Facial - Classic - Skin Brightening': 'A classic skin-brightening facial to refresh the appearance of dull-looking skin.',
+                'Facial - Luxury - HydraBright/SmartLift/Skin Defence 60 mins': 'A 60-minute luxury facial with HydraBright, SmartLift, or Skin Defence options selected for your grooming goals.',
+                'Facial - Luxury - HydraBright/SmartLift/Skin Defence 90 mins': 'A 90-minute luxury facial for extended professional facial care and a refreshed appearance.',
+                'Facial - Pro Skin - HydraBright/SmartLift/Skin Defence 60 mins': 'A 60-minute Pro Skin facial with targeted HydraBright, SmartLift, or Skin Defence options for men in JP Nagar.',
+                'Facial - Pro Skin - HydraBright/SmartLift/Skin Defence 90 mins': 'A 90-minute Pro Skin facial for clients who want extended, targeted professional facial care.'
+            };
+
+            const normaliseServiceName = function (name) {
+                return name.replace(/\s+/g, ' ').trim();
+            };
+
+            document.querySelectorAll('.treatment-menu-table-area tbody tr').forEach(function (row, index) {
+                const serviceHeading = row.querySelector('.service-area h6');
+                const serviceArea = row.querySelector('.service-area');
+                const expandButton = row.querySelector('.expand-btn');
+                if (!serviceHeading || !serviceArea || !expandButton) return;
+
+                const serviceName = normaliseServiceName(serviceHeading.textContent);
+                const description = menServiceDescriptions[serviceName];
+                if (!description) return;
+
+                const descriptionId = 'men-service-description-' + (index + 1);
+                const content = document.createElement('div');
+                const paragraph = document.createElement('p');
+                content.className = 'service-content';
+                content.id = descriptionId;
+                paragraph.textContent = description;
+                content.appendChild(paragraph);
+                serviceArea.appendChild(content);
+
+                expandButton.setAttribute('role', 'button');
+                expandButton.setAttribute('tabindex', '0');
+                expandButton.setAttribute('aria-controls', descriptionId);
+                expandButton.setAttribute('aria-expanded', 'false');
+                expandButton.setAttribute('aria-label', 'Show description for ' + serviceName);
+                expandButton.addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        expandButton.click();
+                    }
+                });
+                expandButton.addEventListener('click', function () {
+                    window.setTimeout(function () {
+                        const isExpanded = expandButton.classList.contains('active');
+                        expandButton.setAttribute('aria-expanded', String(isExpanded));
+                        expandButton.setAttribute('aria-label', (isExpanded ? 'Hide' : 'Show') + ' description for ' + serviceName);
+                        document.querySelectorAll('.treatment-menu-table-area .expand-btn').forEach(function (otherButton) {
+                            if (otherButton !== expandButton && !otherButton.classList.contains('active')) {
+                                otherButton.setAttribute('aria-expanded', 'false');
+                                otherButton.setAttribute('aria-label', otherButton.getAttribute('aria-label').replace('Hide description', 'Show description'));
+                            }
+                        });
+                    }, 0);
+                });
+            });
+        });
+    </script>
     <!-- main js -->
     <script src="/assets/js/main.js"></script>
     <script>

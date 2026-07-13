@@ -45,6 +45,50 @@
       }
     }
     </script>
+    <!-- FAQ Schema: mirrors the visible women's services FAQs below. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Robbin's Unisex Salon located in JP Nagar?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Robbin's Unisex Salon is at No.1746, 9th Cross, 2nd Phase, next to Vignesh Jewellers, JP Nagar, Bengaluru 560078."}
+        },
+        {
+          "@type": "Question",
+          "name": "Which women's beauty and hair services are available at Robbin's Unisex Salon?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Our women's services in JP Nagar include haircuts and styling, hair colour and highlights, texture services, hair spa, threading, waxing, facials, de-tan care, manicure, pedicure, nail services, and scalp care."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to book a women's salon appointment in JP Nagar?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We recommend booking in advance for haircuts, hair colour, facials, waxing, nail services, and other beauty treatments. Call Robbin's Unisex Salon on 9945649161 or use our contact page to request an appointment."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I combine a haircut, hair colour, and hair spa in one visit?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can plan a visit around women's haircut and styling, global hair colour or highlights, and hair-spa services. Let our team know the services you would like when booking so we can reserve suitable time."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer threading, waxing, facials, and nail services?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Our women's beauty services include threading, stripless, classic, and liposoluble waxing options, face and skin care, facials, hand and foot care, gel extensions, refills, and power polish services."}
+        },
+        {
+          "@type": "Question",
+          "name": "What hair and scalp treatments do you offer for women?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Choose from hair spa, argan oil spa, head massage, and scalp-care options including anti-dandruff, anti-hairfall, root-activate, soothing, and purifying services."}
+        },
+        {
+          "@type": "Question",
+          "name": "What are your opening hours for women's beauty services?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Robbin's Unisex Salon is open daily from 9:00 AM to 9:00 PM for women's hair, beauty, and grooming services in JP Nagar, Bengaluru."}
+        }
+      ]
+    }
+    </script>
     <!-- swiper link -->
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
     <!-- fancybox link -->
@@ -60,6 +104,69 @@
     <link rel="stylesheet" href="/assets/css/twentytwenty.css">
     <!-- My css link -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        /* Women's services: show the explainer and service name without prices. */
+        #pills-tabContent .eg-table2 thead th:last-child,
+        #pills-tabContent .eg-table2 tbody td:last-child {
+            display: none;
+        }
+
+        #pills-tabContent .eg-table2 thead th.service,
+        #pills-tabContent .eg-table2 tbody td:nth-child(2),
+        #pills-tabContent .eg-table2 .service-area,
+        #pills-tabContent .eg-table2 .service-area h6,
+        #pills-tabContent .eg-table2 .service-content {
+            text-align: center;
+        }
+
+        #pills-tabContent .eg-table2 thead th.service,
+        #pills-tabContent .eg-table2 .service-area {
+            padding-left: 0;
+        }
+
+        #pills-tabContent .eg-table2 tbody td:nth-child(2) {
+            width: 95%;
+        }
+
+        #pills-tabContent .eg-table2 .service-area {
+            max-width: none;
+        }
+
+        @media (max-width: 767px) {
+            #pills-tabContent .eg-table2 tbody td:nth-child(2) {
+                width: 100%;
+            }
+        }
+
+        .menu-whatsapp-cta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn {
+            background: var(--title-color);
+            color: var(--white-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn::after {
+            background-color: var(--title-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn:hover {
+            color: var(--white-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn .arrow,
+        .menu-whatsapp-cta .whatsapp-cta-btn:hover .arrow {
+            stroke: var(--white-color);
+        }
+
+        .menu-whatsapp-cta .whatsapp-cta-btn .bi-whatsapp {
+            font-size: 18px;
+            line-height: 1;
+        }
+    </style>
     <title>Women's Services Menu | Robbin's Unisex Salon, JP Nagar</title>
     <link rel="icon" href="/assets/image/favicon.ico" type="image/png">
 </head>
@@ -74,7 +181,7 @@
             <div class="main-menu">
                 <div class="mobile-menu-logo">
                     <a href="index.html"><img alt="image" class="img-fluid"
-                            src="https://demo.egenslab.com/html/buret/preview/assets/image/icon/buret-logo.svg"></a>
+                            src="/assets/image/logo-light.png"></a>
                 </div>
                 <ul class="menu-list">
                     <li class="menu">
@@ -147,6 +254,18 @@
             <div class="row justify-content-center">
                 <div class="col-xl-10">
                     <div class="treatment-menu-nav-area">
+                        <div class="menu-whatsapp-cta">
+                            <a class="primary-btn4 whatsapp-cta-btn" href="https://wa.me/919945649161"
+                                target="_blank" rel="noopener noreferrer" aria-label="Book an appointment on WhatsApp">
+                                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                                BOOK VIA WHATSAPP
+                                <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
+                                        stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <div class="nav-link active" id="pills-facial-tab" data-bs-toggle="pill"
@@ -335,7 +454,7 @@
                                                     </td>
                                                     <td class="table-product">
                                                         <div class="service-area">
-                                                            <h6>Global Colors - Root TouchupAmmonia Free</h6>
+                                                            <h6>Global Colors - Root Touchup Ammonia Free</h6>
                                                         </div>
                                                     </td>
                                                     <td><span class="price">1400 INR</span></td>
@@ -922,7 +1041,7 @@
                                                         </div>
                                                     </td>
                                                     <td><span class="price">1650 INR</span></td>
-                                                </tr>\n
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -1706,7 +1825,7 @@
                                                         </div>
                                                     </td>
                                                     <td><span class="price">7000 INR</span></td>
-                                                </tr>\n
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -1980,7 +2099,7 @@
                                                         </div>
                                                     </td>
                                                     <td><span class="price">1200 INR</span></td>
-                                                </tr>\n
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -2112,7 +2231,7 @@
                                                         </div>
                                                     </td>
                                                     <td><span class="price">1800 INR</span></td>
-                                                </tr>\n
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -2526,9 +2645,9 @@
             <div class="row justify-content-center mb-70">
                 <div class="col-xl-5 col-lg-7">
                     <div class="spa-section-title text-center">
-                        <h2>FAQ’S</h2>
-                        <p>We believe in the transformative power of relaxation and self-care. Nestled in the heart of
-                            UK.</p>
+                        <h2>Women's Beauty FAQs in JP Nagar</h2>
+                        <p>Find helpful information about women's hair, skin, nail, and beauty services at Robbin's
+                            Unisex Salon in JP Nagar, Bengaluru.</p>
                     </div>
                 </div>
             </div>
@@ -2542,16 +2661,14 @@
                                     <h5 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                            aria-controls="flush-collapseOne">how can i prepare for my spa
-                                            appointment?</button>
+                                            aria-controls="flush-collapseOne">Where is Robbin's Unisex Salon located
+                                            in JP Nagar?</button>
                                     </h5>
                                     <div id="flush-collapseOne" class="accordion-collapse collapse show"
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Robbin's Unisex Salon is at No.1746, 9th Cross, 2nd Phase, next to Vignesh
+                                            Jewellers, JP Nagar, Bengaluru 560078.
                                         </div>
                                     </div>
                                 </div>
@@ -2560,16 +2677,15 @@
                                     <h5 class="accordion-header" id="flush-headingTwo">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo">how do i book an
-                                            appointment?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">Which women's
+                                            beauty and hair services are available at Robbin's Unisex Salon?</button>
                                     </h5>
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Our women's services in JP Nagar include haircuts and styling, hair colour
+                                            and highlights, texture services, hair spa, threading, waxing, facials,
+                                            de-tan care, manicure, pedicure, nail services, and scalp care.
                                         </div>
                                     </div>
                                 </div>
@@ -2578,16 +2694,16 @@
                                     <h5 class="accordion-header" id="flush-headingThree">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">What services do
-                                            you offer at your beauty and spa center?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseThree">Do I need to
+                                            book a women's salon appointment in JP Nagar?</button>
                                     </h5>
                                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            We recommend booking in advance for haircuts, hair colour, facials, waxing,
+                                            nail services, and other beauty treatments. Call us on <a
+                                                href="tel:9945649161">9945649161</a> or use our <a
+                                                href="contact.html">contact page</a> to request an appointment.
                                         </div>
                                     </div>
                                 </div>
@@ -2596,16 +2712,15 @@
                                     <h5 class="accordion-header" id="flush-headingFour">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
-                                            aria-expanded="false" aria-controls="flush-collapseFour">what should i
-                                            expect during my spa visit?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseFour">Can I combine a
+                                            haircut, hair colour, and hair spa in one visit?</button>
                                     </h5>
                                     <div id="flush-collapseFour" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Yes. You can plan a visit around women's haircut and styling, global hair
+                                            colour or highlights, and hair-spa services. Let our team know the services
+                                            you would like when booking so we can reserve suitable time.
                                         </div>
                                     </div>
                                 </div>
@@ -2614,16 +2729,15 @@
                                     <h5 class="accordion-header" id="flush-headingFive">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
-                                            aria-expanded="false" aria-controls="flush-collapseFive">do you offer gift
-                                            certificates for spa services?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseFive">Do you offer
+                                            threading, waxing, facials, and nail services?</button>
                                     </h5>
                                     <div id="flush-collapseFive" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Yes. Our women's beauty services include threading, stripless, classic, and
+                                            liposoluble waxing options, face and skin care, facials, hand and foot
+                                            care, gel extensions, refills, and power polish services.
                                         </div>
                                     </div>
                                 </div>
@@ -2632,16 +2746,15 @@
                                     <h5 class="accordion-header" id="flush-headingSix">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
-                                            aria-expanded="false" aria-controls="flush-collapseSix"> How should I
-                                            prepare for my spa appointment?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseSix">What hair and
+                                            scalp treatments do you offer for women?</button>
                                     </h5>
                                     <div id="flush-collapseSix" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Choose from hair spa, argan oil spa, head massage, and scalp-care options
+                                            including anti-dandruff, anti-hairfall, root-activate, soothing, and
+                                            purifying services.
                                         </div>
                                     </div>
                                 </div>
@@ -2650,16 +2763,14 @@
                                     <h5 class="accordion-header" id="flush-headingSeven">
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven"
-                                            aria-expanded="false" aria-controls="flush-collapseSeven"> what is your
-                                            cancellation policy?</button>
+                                            aria-expanded="false" aria-controls="flush-collapseSeven">What are your
+                                            opening hours for women's beauty services?</button>
                                     </h5>
                                     <div id="flush-collapseSeven" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
-                                            We offer a comprehensive range of services designed to enhance your beauty
-                                            and well-being. Our services include facials, massages, body treatments,
-                                            waxing, nail care (manicures and pedicures), makeup application, and more.
-                                            Visit our Services page for a detailed list.
+                                            Robbin's Unisex Salon is open daily from 9:00 AM to 9:00 PM for women's
+                                            hair, beauty, and grooming services in JP Nagar, Bengaluru.
                                         </div>
                                     </div>
                                 </div>
@@ -2690,7 +2801,7 @@
                 <div class="row g-4 mb-100">
                     <div class="col-lg-4 col-md-6">
                         <a class="primary-btn1 footer-btn" href="contact.html">
-                            BOOK AN APPOINTMNET
+                            BOOK AN APPOINTMENT
                             <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
@@ -2856,6 +2967,127 @@
     <script src="/assets/js/bootstrap.min.js"></script>
     <script src="/assets/js/jquery.twentytwenty.js"></script>
     <script src="/assets/js/jquery.event.move.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const descriptionForService = function (serviceName) {
+                if (serviceName.startsWith('Sculpt -')) {
+                    return 'A personalised women\'s haircut in JP Nagar, Bengaluru, shaped by your stylist for a polished, easy-to-manage finish.';
+                }
+                if (serviceName.startsWith('Hairstyling -')) {
+                    return 'Professional ' + serviceName.replace('Hairstyling - ', '').toLowerCase() + ' styling for a neat, event-ready, or everyday hair finish.';
+                }
+                if (serviceName.startsWith('Global Colors - Root')) {
+                    return 'A professional root touch-up hair-colour service to refresh visible regrowth and maintain an even-looking colour.';
+                }
+                if (serviceName.startsWith('Global Colors -')) {
+                    return 'A full-colour hair service for ' + serviceName.replace('Global Colors - ', '').toLowerCase() + ', tailored to refresh or transform your look.';
+                }
+                if (serviceName.startsWith('Highlights -')) {
+                    return 'A women\'s hair highlighting service that adds dimension, brightness, and a personalised finish to your hairstyle.';
+                }
+                if (serviceName.startsWith('Texture -')) {
+                    return 'A professional smoothing and texture service for ' + serviceName.replace('Texture - ', '').toLowerCase() + ', designed for a more manageable finish.';
+                }
+                if (serviceName.startsWith('Retexture -')) {
+                    return 'A protein-based hair retexturing treatment for ' + serviceName.replace('Retexture - ', '').toLowerCase() + ', tailored to your hair-care routine.';
+                }
+                if (serviceName.startsWith('Bonding -')) {
+                    return 'A professional bond-support service that complements your hair-colour or texture treatment and helps maintain a cared-for finish.';
+                }
+                if (serviceName.startsWith('Hair Spa -')) {
+                    return 'A professional hair-spa service for ' + serviceName.replace('Hair Spa - ', '').toLowerCase() + ', created for a relaxing women\'s hair-care experience in JP Nagar.';
+                }
+                if (serviceName.startsWith('Argan Oil Spa -')) {
+                    return 'An argan oil hair-spa treatment for ' + serviceName.replace('Argan Oil Spa - ', '').toLowerCase() + ', designed to leave hair feeling nourished and cared for.';
+                }
+                if (serviceName.startsWith('Argan Oil Scalp -')) {
+                    return 'An argan oil scalp-care service for dry or oily scalp needs as part of a professional women\'s hair-care routine.';
+                }
+                if (serviceName.startsWith('Threading -')) {
+                    return 'Precise facial threading for ' + serviceName.replace('Threading - ', '').toLowerCase() + ', creating a clean, defined, well-groomed finish.';
+                }
+                if (serviceName.startsWith('Waxing - Stripless -')) {
+                    return 'Stripless waxing for ' + serviceName.replace('Waxing - Stripless - ', '').toLowerCase() + ', delivered as a targeted women\'s grooming service.';
+                }
+                if (serviceName.startsWith('Waxing - Classic -')) {
+                    return 'Classic waxing for ' + serviceName.replace('Waxing - Classic - ', '').toLowerCase() + ', for a smooth, well-maintained grooming result.';
+                }
+                if (serviceName.startsWith('Waxing - Liposoluble -')) {
+                    return 'Liposoluble waxing for ' + serviceName.replace('Waxing - Liposoluble - ', '').toLowerCase() + ', as part of our women\'s beauty services in Bengaluru.';
+                }
+                if (serviceName.startsWith('Bleaching -')) {
+                    return 'Professional bleaching for ' + serviceName.replace('Bleaching - ', '').toLowerCase() + ', for an even-looking and polished grooming finish.';
+                }
+                if (serviceName.startsWith('De-Tan -')) {
+                    return 'Targeted de-tan care for ' + serviceName.replace('De-Tan - ', '').toLowerCase() + ', helping refresh the appearance of sun-exposed skin.';
+                }
+                if (serviceName.startsWith('FaceFit -')) {
+                    return 'A ' + serviceName.replace('FaceFit - ', '').toLowerCase() + ' FaceFit session for a refreshed, professional facial-care experience.';
+                }
+                if (serviceName.startsWith('Facial -')) {
+                    return 'A professional facial with ' + serviceName.replace('Facial - ', '').toLowerCase() + ' options, selected to suit your women\'s skin-care and grooming goals.';
+                }
+                if (serviceName.startsWith('Cuticles -')) {
+                    return 'Detailed hand or foot cuticle care for ' + serviceName.replace('Cuticles - ', '').toLowerCase() + ', keeping nails neat and well-groomed.';
+                }
+                if (serviceName.startsWith('Nails -')) {
+                    return 'A professional nail service for ' + serviceName.replace('Nails - ', '').toLowerCase() + ', for a polished manicure or pedicure finish.';
+                }
+                if (serviceName.startsWith('Head Massage -')) {
+                    return 'A relaxing ' + serviceName.replace('Head Massage - ', '').toLowerCase() + ' head-massage service for a refreshing salon visit.';
+                }
+                if (serviceName.startsWith('Scalp Care -')) {
+                    return 'Professional scalp care for ' + serviceName.replace('Scalp Care - ', '').toLowerCase() + ', as part of a dedicated women\'s hair-care routine.';
+                }
+                return null;
+            };
+
+            document.querySelectorAll('.treatment-menu-table-area tbody tr').forEach(function (row, index) {
+                const serviceHeading = row.querySelector('.service-area h6');
+                const serviceArea = row.querySelector('.service-area');
+                const expandButton = row.querySelector('.expand-btn');
+                if (!serviceHeading || !serviceArea || !expandButton) return;
+
+                const serviceName = serviceHeading.textContent.replace(/\s+/g, ' ').trim();
+                const description = descriptionForService(serviceName);
+                if (!description) return;
+
+                const descriptionId = 'women-service-description-' + (index + 1);
+                const content = document.createElement('div');
+                const paragraph = document.createElement('p');
+                content.className = 'service-content';
+                content.id = descriptionId;
+                paragraph.textContent = description;
+                content.appendChild(paragraph);
+                serviceArea.appendChild(content);
+
+                expandButton.setAttribute('role', 'button');
+                expandButton.setAttribute('tabindex', '0');
+                expandButton.setAttribute('aria-controls', descriptionId);
+                expandButton.setAttribute('aria-expanded', 'false');
+                expandButton.setAttribute('aria-label', 'Show description for ' + serviceName);
+                expandButton.addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        expandButton.click();
+                    }
+                });
+                expandButton.addEventListener('click', function () {
+                    window.setTimeout(function () {
+                        const isExpanded = expandButton.classList.contains('active');
+                        expandButton.setAttribute('aria-expanded', String(isExpanded));
+                        expandButton.setAttribute('aria-label', (isExpanded ? 'Hide' : 'Show') + ' description for ' + serviceName);
+                        document.querySelectorAll('.treatment-menu-table-area .expand-btn').forEach(function (otherButton) {
+                            if (otherButton !== expandButton && !otherButton.classList.contains('active')) {
+                                otherButton.setAttribute('aria-expanded', 'false');
+                                otherButton.setAttribute('aria-label', otherButton.getAttribute('aria-label').replace('Hide description', 'Show description'));
+                            }
+                        });
+                    }, 0);
+                });
+            });
+        });
+    </script>
     <!-- main js -->
     <script src="/assets/js/main.js"></script>
     <script>
